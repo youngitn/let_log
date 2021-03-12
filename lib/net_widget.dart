@@ -125,7 +125,7 @@ class _NetWidgetState extends State<NetWidget> {
                 children: [
                   Text(
                     "[${item.type}] ${item.api}",
-                    style: const TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: 10),
                   ),
                   if (item.showDetail)
                     Padding(
@@ -134,7 +134,7 @@ class _NetWidgetState extends State<NetWidget> {
                         "Request: ${item.req ?? ""}",
                         maxLines: 100,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(fontSize: 14),
+                        style: const TextStyle(fontSize: 10),
                       ),
                     ),
                   if (item.showDetail)
@@ -144,7 +144,7 @@ class _NetWidgetState extends State<NetWidget> {
                         "Response: ${item.res ?? ""}",
                         maxLines: 100,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(fontSize: 14),
+                        style: const TextStyle(fontSize: 10),
                       ),
                     ),
                   if (item.showDetail && item.headers != null)
@@ -154,7 +154,7 @@ class _NetWidgetState extends State<NetWidget> {
                         "Headers: ${item.headers ?? ""}",
                         maxLines: 100,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(fontSize: 14),
+                        style: const TextStyle(fontSize: 10),
                       ),
                     ),
                   Padding(
@@ -165,7 +165,7 @@ class _NetWidgetState extends State<NetWidget> {
                           width: 120,
                           child: Text(
                             "${item.start.hour}:${item.start.minute}:${item.start.second}:${item.start.millisecond}",
-                            style: const TextStyle(fontSize: 14),
+                            style: const TextStyle(fontSize: 10),
                             maxLines: 1,
                           ),
                         ),
@@ -173,14 +173,14 @@ class _NetWidgetState extends State<NetWidget> {
                           width: 100,
                           child: Text(
                             "${item.spend ?? "0"} ms",
-                            style: const TextStyle(fontSize: 14),
+                            style: const TextStyle(fontSize: 10),
                             overflow: TextOverflow.visible,
                             maxLines: 1,
                           ),
                         ),
                         Text(
                           "${item.getReqSize()}/${item.getResSize()}B",
-                          style: const TextStyle(fontSize: 14),
+                          style: const TextStyle(fontSize: 10),
                           overflow: TextOverflow.visible,
                           maxLines: 1,
                         ),
@@ -203,7 +203,7 @@ class _NetWidgetState extends State<NetWidget> {
                         color: Colors.transparent,
                         child: Text(
                           "copy success!",
-                          style: TextStyle(color: Colors.white, fontSize: 30),
+                          style: TextStyle(color: Colors.white, fontSize: 10),
                         ),
                       ),
                     );
@@ -215,12 +215,12 @@ class _NetWidgetState extends State<NetWidget> {
                 children: [
                   Text(
                     item.status.toString(),
-                    style: TextStyle(fontSize: 20, color: color),
+                    style: TextStyle(fontSize: 10, color: color),
                   ),
                   if (item.showDetail)
                     const Text(
                       "copy",
-                      style: TextStyle(fontSize: 16, color: Colors.blue),
+                      style: TextStyle(fontSize: 10, color: Colors.blue),
                     ),
                 ],
               ),
@@ -248,7 +248,7 @@ class _NetWidgetState extends State<NetWidget> {
     _Net.types.forEach((f) {
       arr.add(
         ChoiceChip(
-          label: Text(f, style: const TextStyle(fontSize: 14)),
+          label: Text(f, style: const TextStyle(fontSize: 10)),
           selectedColor: const Color(0xFFCBE2F6),
           selected: _selectTypes.contains(f),
           onSelected: (value) {
