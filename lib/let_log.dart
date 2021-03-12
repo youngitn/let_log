@@ -38,7 +38,7 @@ class _Config {
     String response,
   }) {
     _printNames = [
-      log ?? "[Log]",
+      log ?? "[Log5566]",
       debug ?? "[Debug]",
       warn ?? "[Warn]",
       error ?? "[Error]",
